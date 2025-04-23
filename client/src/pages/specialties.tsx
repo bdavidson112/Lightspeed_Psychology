@@ -5,9 +5,9 @@ export default function Specialties() {
     <section className="page-transition py-16 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="section-title">Our Specialties</h2>
+          <h2 className="section-title">Areas of Expertise</h2>
           <p className="section-description">
-            We offer expertise in multiple medical specialties to provide you with comprehensive care.
+            Dr. Burleson offers expertise in multiple psychological specialties to provide you with comprehensive care.
           </p>
         </div>
         

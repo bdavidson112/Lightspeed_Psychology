@@ -71,30 +71,54 @@ export default function Contact() {
     return isValid;
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    
+
     if (validateForm()) {
-      // Form is valid, you would normally submit to server here
-      console.log("Form submitted:", formData);
-      
-      // Show success toast
-      toast({
-        title: "Message Sent",
-        description: "Thank you for your message! We will contact you soon.",
-      });
-      
-      // Reset form
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        reason: "Schedule appointment",
-        message: "",
-      });
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key: "b06e5d46-ddb6-4eec-80b4-1708003e1054", 
+            ...formData, // Include all form fields
+          }),
+        });
+
+        if (response.ok) {
+          toast({
+            title: "Message Sent",
+            description: "Thank you for your message! We will contact you soon.",
+          });
+
+          // Reset the form
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+            reason: "Schedule appointment",
+            message: "",
+          });
+        } else {
+          toast({
+            title: "Error",
+            description: "Failed to send your message. Please try again later.",
+            variant: "destructive",
+          });
+        }
+      } catch (error) {
+        console.error(error);
+        toast({
+          title: "Error",
+          description: "An unexpected error occurred. Please try again later.",
+          variant: "destructive",
+        });
+      }
     } else {
-      // Show error toast
       toast({
         title: "Form Error",
         description: "Please fill in all required fields.",
@@ -107,9 +131,9 @@ export default function Contact() {
     <section className="page-transition py-16 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="section-title">Contact Us</h2>
+          <h2 className="section-title">Contact Me</h2>
           <p className="section-description">
-            Have questions or ready to schedule an appointment? Reach out to us and we'll be happy to help.
+            Have questions or ready to schedule an appointment?
           </p>
         </div>
         
@@ -193,8 +217,6 @@ export default function Contact() {
                     <SelectContent>
                       <SelectItem value="Schedule appointment">Schedule appointment</SelectItem>
                       <SelectItem value="General inquiry">General inquiry</SelectItem>
-                      <SelectItem value="Medical records">Medical records</SelectItem>
-                      <SelectItem value="Billing question">Billing question</SelectItem>
                       <SelectItem value="Other">Other</SelectItem>
                     </SelectContent>
                   </Select>
@@ -220,7 +242,7 @@ export default function Contact() {
                 <div>
                   <Button 
                     type="submit" 
-                    className="w-full py-2 px-4 rounded-md bg-primary-600 hover:bg-primary-700 text-white"
+                    className="display-flex align-items-center px-12 py-3 text-base rounded-md border-gray-600 dark:border-gray-600 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
                     Send Message
                   </Button>
@@ -235,33 +257,13 @@ export default function Contact() {
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
                     <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
-                      <i className="fas fa-map-marker-alt text-primary-600 dark:text-primary-400"></i>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-medium text-gray-900 dark:text-white">Location</h4>
-                    <p className="text-gray-600 dark:text-gray-300 mt-1">
-                      123 Healthcare Drive<br />
-                      Medical Center, Suite 200<br />
-                      Anytown, ST 12345
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
                       <i className="fas fa-phone-alt text-primary-600 dark:text-primary-400"></i>
                     </div>
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white">Phone</h4>
                     <p className="text-gray-600 dark:text-gray-300 mt-1">
-                      (555) 123-4567
-                    </p>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
-                      Monday-Friday: 8am-6pm<br />
-                      Saturday: 9am-1pm
+                      (949) 557-7083
                     </p>
                   </div>
                 </div>
@@ -275,22 +277,12 @@ export default function Contact() {
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white">Email</h4>
                     <p className="text-gray-600 dark:text-gray-300 mt-1">
-                      info@healthcarepractice.com
+                      drgingerburleson@gmail.com
                     </p>
                     <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
                       For general inquiries and appointment requests
                     </p>
                   </div>
-                </div>
-              </div>
-              
-              <div className="mt-8 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden h-64">
-                {/* Map placeholder */}
-                <div className="w-full h-full bg-gray-200 dark:bg-gray-600 flex items-center justify-center">
-                  <span className="text-gray-600 dark:text-gray-300">
-                    <i className="fas fa-map text-4xl mb-2 block"></i>
-                    <span>Interactive Map</span>
-                  </span>
                 </div>
               </div>
             </div>

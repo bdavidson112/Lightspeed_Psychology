@@ -1,4 +1,5 @@
-import { TEAM_MEMBERS } from "@/lib/constants";
+import React from 'react';
+import headshot from "../assets/headshot.JPG"; // Import the image
 
 export default function About() {
   return (
@@ -6,59 +7,44 @@ export default function About() {
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="section-title">About Us</h2>
+            <h2 className="section-title">About Dr. Burleson</h2>
             <p className="section-description">
-              Learn about our practice and our commitment to providing exceptional healthcare.
+              Learn about her commitment to providing exceptional care.
             </p>
           </div>
           
           <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden mb-12">
             <div className="md:flex">
               <div className="md:w-1/2">
-                <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" alt="Our medical team" className="w-full h-full object-cover" />
+                <img src={headshot} alt="Dr. Burleson" className="w-full h-full object-cover" />
               </div>
+
               <div className="p-8 md:w-1/2">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Our Mission</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">The Mission</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Our mission is to provide compassionate, high-quality healthcare that improves the health and wellbeing of the patients and communities we serve.
+                  To provide compassionate, high-quality care that improves the health and wellbeing of the patients and communities she serves.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  We are committed to excellence in patient care, education, and research, while fostering an environment of teamwork, respect, and integrity.
+                  Dr. Burleson is dedicated to providing a safe and supportive environment for her patients, where they can feel comfortable discussing their mental health concerns and receiving the care they need.
                 </p>
               </div>
             </div>
           </div>
           
           <div className="mb-16">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white text-center">Our Story</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white text-center">The Story</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Founded in 2005, our practice began with a vision to create a healthcare experience that puts patients first. What started as a small clinic has grown into a comprehensive healthcare practice serving thousands of patients in our community.
+              Since 2014, Dr. Burleson has accrued  training and clinical experience working with teens and adults in an inpatient psychiatric facility, intensive outpatient program, dual diagnosis residential treatment facility and private practice setting. She has extensive experience working with active duty military service members and their families. Dr. Burleson is passionate about women's issues and has spent several years working with women with substance use issues, conflictual relationships, personality disorders, and other mental health issues.
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Throughout our journey, we've remained dedicated to our core values of compassion, excellence, and accessibility. We believe that everyone deserves high-quality healthcare delivered with dignity and respect.
+              Throughout her doctoral training, Dr. Burleson focused extensively on child and family issues. Specifically, she was involved in multiple research studies that focused on identifying and understanding issues that occur during mid-treatment in Multisystemic Family Therapy. She has utilized this experience to work with parents of teens that are experiencing difficulties such as substance use and other behavioral issues.
+            </p>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Dr. Burleson is a parent who has personal experience raising neurodivergent children including ADHD and autism. She is also the spouse of a retired military service member who has experienced deployments and other factors related to military culture. She embraces Geek culture, watches anime and is an avid Harry Potter and Disney buff.
             </p>
             <p className="text-gray-600 dark:text-gray-300">
-              As we've grown, we've expanded our services and specialties to meet the evolving needs of our patients, while maintaining the personalized care and attention that has been our hallmark from the beginning.
+            If you are interested in scheduling an appointment and or have additional questions, please navigate to the contact page and Dr. Burleson will contact you directly to schedule a 15 minute consultation appointment.
             </p>
-          </div>
-          
-          <div>
-            <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white text-center">Meet Our Team</h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {TEAM_MEMBERS.map((member, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden">
-                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                  </div>
-                  <h4 className="text-xl font-semibold text-gray-900 dark:text-white">{member.name}</h4>
-                  <p className="text-primary-600 dark:text-primary-400 mb-2">{member.title}</p>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm">
-                    {member.description}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="text-primary-600 dark:text-primary-400 font-bold text-xl">
-              <span className="text-secondary-700 dark:text-secondary-400">Health</span>Care
+              <span className="text-secondary-700 dark:text-secondary-400">Lightspeed Psychology</span>
             </Link>
           </div>
           

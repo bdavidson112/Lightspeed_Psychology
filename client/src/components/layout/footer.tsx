@@ -7,32 +7,23 @@ export default function Footer() {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-white">HealthCare</h3>
+            <h3 className="text-xl font-bold mb-4 text-white">
+              Lightspeed Psychology
+            </h3>
             <p className="text-gray-300 mb-4">
-              Providing compassionate, high-quality healthcare to our community since 2005.
+              This site is unable to provide support with mental health crises.
+              If you are experiencing a mental health crisis please call 911,
+              text 988 or go to your nearest emergency department
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-primary-400 transition">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className="text-gray-300 hover:text-primary-400 transition">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="text-gray-300 hover:text-primary-400 transition">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="#" className="text-gray-300 hover:text-primary-400 transition">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-            </div>
           </div>
-          
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">
+              Quick Links
+            </h4>
             <ul className="space-y-2">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="text-gray-300 hover:text-primary-400 transition"
                   >
@@ -42,13 +33,13 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4 text-white">Services</h4>
             <ul className="space-y-2">
               {SERVICES.slice(0, 5).map((service, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     href="/services"
                     className="text-gray-300 hover:text-primary-400 transition"
                   >
@@ -58,33 +49,29 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          
+
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Contact Info</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">
+              Contact Info
+            </h4>
             <ul className="space-y-2">
               <li className="flex items-start">
-                <i className="fas fa-map-marker-alt mt-1 mr-2 text-primary-400"></i>
-                <span className="text-gray-300">123 Healthcare Drive, Anytown, ST 12345</span>
-              </li>
-              <li className="flex items-start">
                 <i className="fas fa-phone-alt mt-1 mr-2 text-primary-400"></i>
-                <span className="text-gray-300">(555) 123-4567</span>
+                <span className="text-gray-300">(949) 557-7083</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-envelope mt-1 mr-2 text-primary-400"></i>
-                <span className="text-gray-300">info@healthcarepractice.com</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-clock mt-1 mr-2 text-primary-400"></i>
-                <span className="text-gray-300">Mon-Fri: 8am-6pm, Sat: 9am-1pm</span>
+                <span className="text-gray-300">
+                drgingerburleson@gmail.com
+                </span>
               </li>
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-12 pt-8 border-t border-gray-700">
           <p className="text-gray-300 text-center">
-            &copy; {new Date().getFullYear()} HealthCare Practice. All rights reserved.
+            &copy; {new Date().getFullYear()} Lightspeed Psychology, Professional Corporation
           </p>
         </div>
       </div>

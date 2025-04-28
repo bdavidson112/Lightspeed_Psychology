@@ -1,5 +1,5 @@
 import React from 'react';
-import headshot from "../assets/headshot.JPG"; // Import the image
+import headshot from "../assets/headshot.JPG"; 
 
 export default function About() {
   return (

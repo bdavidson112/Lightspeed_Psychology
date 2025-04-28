@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import palmtree from "../assets/palmtree.jpg"
 
 export default function Home() {
   return (
@@ -41,7 +42,7 @@ export default function Home() {
           </div>
           <div className="lg:w-1/2 mt-10 lg:mt-0">
             <img
-              src="https://images.pexels.com/photos/30905650/pexels-photo-30905650/free-photo-of-serene-snowy-pine-forest-by-mountain-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={palmtree}
               alt=""
               className="rounded-xl shadow-xl w-full h-auto object-cover"
             />

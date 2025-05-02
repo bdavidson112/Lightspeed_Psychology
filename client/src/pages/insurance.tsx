@@ -6,7 +6,7 @@ import {
 
 export default function Insurance() {
   return (
-    <section className="page-transition bg-gray-100 dark:bg-gray-800 py-16 px-4 sm:px-6 lg:px-8">
+    <section className="page-transition custom-background dark:bg-gray-800 py-16 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="section-title">Rates & Insurance</h2>
@@ -23,7 +23,7 @@ export default function Insurance() {
                 Insurance Plans
               </h3>
 
-              <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 mb-8">
+              <div className="bg-amber-50 dark:bg-gray-700 rounded-lg shadow-md p-6 mb-8">
                 <h4 className="text-xl font-medium text-gray-900 dark:text-white mb-4">
                   We accept:
                 </h4>
@@ -38,7 +38,7 @@ export default function Insurance() {
                 </ul>
               </div>
 
-              <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">
+              <div className="bg-amber-50 dark:bg-gray-700 rounded-lg shadow-md p-6">
                 <h4 className="text-xl font-medium text-gray-900 dark:text-white mb-4">
                   "Good Faith Estimate"
                 </h4>
@@ -74,14 +74,14 @@ export default function Insurance() {
                 Fee Schedule
               </h3>
 
-              <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 mb-8">
+              <div className="bg-amber-50 dark:bg-gray-700 rounded-lg shadow-md p-6 mb-8">
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
                   What is your session fee?
                 </p>
 
                 <div className="overflow-hidden border border-gray-200 dark:border-gray-600 rounded-lg mb-6">
                   <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
-                    <thead className="bg-gray-50 dark:bg-gray-800">
+                    <thead className="bg-gray-100 dark:bg-gray-800">
                       <tr>
                         <th
                           scope="col"
@@ -97,7 +97,7 @@ export default function Insurance() {
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="bg-white dark:bg-gray-700 divide-y divide-gray-200 dark:divide-gray-600">
+                    <tbody className="bg-gray-50 dark:bg-gray-700 divide-y divide-gray-200 dark:divide-gray-600">
                       {FEE_SCHEDULE.map((fee, index) => (
                         <tr key={index}>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">

@@ -128,7 +128,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="page-transition py-16 px-4 sm:px-6 lg:px-8">
+    <section className="custom-background page-transition py-16 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="section-title">Contact Me</h2>
@@ -152,7 +152,7 @@ export default function Contact() {
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
-                      className={`bg-white dark:bg-gray-700 border ${
+                      className={`bg-amber-50 dark:bg-gray-700 border ${
                         formErrors.firstName ? "border-red-500" : "border-gray-300 dark:border-gray-600"
                       }`}
                     />
@@ -169,7 +169,7 @@ export default function Contact() {
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
-                      className={`bg-white dark:bg-gray-700 border ${
+                      className={`bg-amber-50 dark:bg-gray-700 border ${
                         formErrors.lastName ? "border-red-500" : "border-gray-300 dark:border-gray-600"
                       }`}
                     />
@@ -187,7 +187,7 @@ export default function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`bg-white dark:bg-gray-700 border ${
+                    className={`bg-amber-50 dark:bg-gray-700 border ${
                       formErrors.email ? "border-red-500" : "border-gray-300 dark:border-gray-600"
                     }`}
                   />
@@ -204,14 +204,14 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600"
+                    className="bg-amber-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600"
                   />
                 </div>
                 
                 <div className="space-y-2">
                   <Label htmlFor="reason" className="text-sm font-medium text-gray-700 dark:text-gray-300">Reason for contact</Label>
                   <Select defaultValue={formData.reason} onValueChange={handleSelectChange}>
-                    <SelectTrigger className="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600">
+                    <SelectTrigger className="bg-amber-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600">
                       <SelectValue placeholder="Select a reason" />
                     </SelectTrigger>
                     <SelectContent>
@@ -230,7 +230,7 @@ export default function Contact() {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className={`bg-white dark:bg-gray-700 border ${
+                    className={`bg-amber-50 dark:bg-gray-700 border ${
                       formErrors.message ? "border-red-500" : "border-gray-300 dark:border-gray-600"
                     }`}
                   />
@@ -242,7 +242,7 @@ export default function Contact() {
                 <div>
                   <Button 
                     type="submit" 
-                    className="display-flex align-items-center px-12 py-3 text-base rounded-md border-gray-600 dark:border-gray-600 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700"
+                    className="display-flex align-items-center px-12 py-3 text-base rounded-md border-gray-600 dark:border-gray-600 text-gray-700 dark:text-gray-300 bg-amber-50 dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
                     Send Message
                   </Button>

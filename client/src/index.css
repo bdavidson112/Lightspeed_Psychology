@@ -17,6 +17,7 @@
 }
 
 @layer components {
+  
   .container {
     @apply px-4 sm:px-6 lg:px-8 mx-auto;
   }
@@ -31,6 +32,10 @@
 
   .section-description {
     @apply text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto;
+  }
+
+  .custom-background {
+    @apply bg-blue-100 dark:bg-gray-900; /* Light and dark mode backgrounds */
   }
 }
 

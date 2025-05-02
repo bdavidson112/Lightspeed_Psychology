@@ -21,7 +21,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`bg-white dark:bg-gray-800 sticky top-0 z-50 transition-shadow ${isScrolled ? 'shadow-md' : 'shadow-sm'}`}>
+    <header className={`bg-amber-50 dark:bg-gray-800 sticky top-0 z-50 transition-shadow ${isScrolled ? 'shadow-md' : 'shadow-sm'}`}>
       <div className="container mx-auto">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}

@@ -3,7 +3,7 @@ import { SERVICES } from "@/lib/constants";
 
 export default function Services() {
   return (
-    <section className="page-transition bg-gray-100 dark:bg-gray-800 py-16 px-4 sm:px-6 lg:px-8">
+    <section className="page-transition custom-background dark:bg-gray-800 py-16 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="section-title">Our Services</h2>
@@ -14,7 +14,7 @@ export default function Services() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {SERVICES.map((service, index) => (
-            <div key={index} className="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+            <div key={index} className="bg-amber-50 dark:bg-gray-700 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
               <div className="h-48 bg-gray-200 dark:bg-gray-600">
                 <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
               </div>

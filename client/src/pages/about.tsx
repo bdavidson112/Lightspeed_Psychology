@@ -3,7 +3,7 @@ import headshot from "../assets/headshot.JPG";
 
 export default function About() {
   return (
-    <section className="page-transition bg-gray-100 dark:bg-gray-800 py-16 px-4 sm:px-6 lg:px-8">
+    <section className="page-transition custom-background dark:bg-gray-800 py-16 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -13,7 +13,7 @@ export default function About() {
             </p>
           </div>
           
-          <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden mb-12">
+          <div className="bg-amber-50 dark:bg-gray-700 rounded-lg shadow-md overflow-hidden mb-12">
             <div className="md:flex">
               <div className="md:w-1/2">
                 <img src={headshot} alt="Dr. Burleson" className="w-full h-full object-cover" />

@@ -4,7 +4,7 @@ import palmtree from "../assets/palmtree.jpg"
 
 export default function Home() {
   return (
-    <section className="page-transition pt-16 pb-24 px-4 sm:px-6 lg:px-8">
+    <section className="custom-background page-transition pt-16 pb-24 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
@@ -26,14 +26,14 @@ export default function Home() {
               <Link href="/contact">
                 <Button 
                   variant="outline"
-                  className="px-6 py-3 text-base rounded-md border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700">
+                  className="px-6 py-3 text-base rounded-md border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 bg-amber-50 dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700">
                   Lets Start!
                 </Button>
               </Link>
               <Link href="/services">
                 <Button
                   variant="outline"
-                  className="px-6 py-3 text-base rounded-md border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700"
+                  className="bg-amber-50 px-6 py-3 text-base rounded-md border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700"
                 >
                   Our Services
                 </Button>
@@ -51,7 +51,7 @@ export default function Home() {
 
         {/* Features Section */}
         <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div className="bg-amber-50 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition">
             <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mb-4">
               <i className="fas fa-clipboard text-primary-600 dark:text-primary-400 text-xl"></i>
             </div>
@@ -64,7 +64,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div className="bg-amber-50 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition">
             <div className="w-12 h-12 bg-secondary-100 dark:bg-secondary-900 rounded-full flex items-center justify-center mb-4">
               <i className="fas fa-desktop text-secondary-600 dark:text-secondary-400 text-xl"></i>
             </div>
@@ -77,7 +77,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div className="bg-amber-50 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition">
             <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mb-4">
               <i className="fas fa-user-shield text-primary-600 dark:text-primary-400 text-xl"></i>
             </div>
